@@ -11,8 +11,8 @@ app.use(cors());
 app.use(bodyParser.json());
 
 // Routes
-app.use('/api', require('./routes/auth'));
-app.use('/api/passwords', require('./routes/passwords'));
+app.use('/s3/api', require('./routes/auth'));
+app.use('/s3/api/passwords', require('./routes/passwords'));
 
 app.get('/', (req, res) => {
     res.send('Password Manager API');
